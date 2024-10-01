@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Student Feedback Form</title>
+    <link href="Style/survey.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="Image/TempleUniversityLogo.png">
+</head>
+<body>
+    <form method="post" action="./survey.aspx" id="form1">
+        <div class="titleNav">
+            <img src="Image/TempleUniveristyName.png" alt="Logo">
+            <h1>Student Feedback Form </h1>
+        </div>
+
+        <div class="Questions">
+            <h2>Enter student information </h2>
+            
+            <div class="StudentInfo">
+                <h4>Name: </h4>
+                <!-- https://www.w3schools.com/html/html_form_attributes.asp -->
+                <!--  Talks about attributes like placeholder, value, pattern,required-->
+                <!--  Not sure if this counts as extra credits, didnt know we have to do validation for the radio buttons since I thought it was pointless -->
+
+                <input type="text" name="txtName" id="txtName" required pattern="[A-Za-z\s]+" title="Name can only contain letters and spaces." />
+            </div>
+
+
+            <div class="StudentInfo">
+                <h4>Student ID: </h4>
+                <input type="text" name="txtStudentID" id="txtStudentID" required placeholder = "5 digits Tu ID" pattern="[0-9]{5}" title="Student ID must be 5 digits numeric." />
+            </div>
+        </div>
+
+        <div class="Questions">
+            <h2>Courses </h2>
+
+            <div class="Courses">
+                <h4>Select a course: </h4>
+                <select id="ddlCourse" name="ddlCourse" required>
+                    <option value="CIS2229">Architecture, Operating Systems, and Networking</option>
+                    <option value="CIS3775">Information Technology Project Management</option>
+                    <option value="CIS3342">Server-Side Web-Application</option>
+                    <option value="CIS3309">Component-Based Software Design</option>
+                    <option value="CIS3605">Introduction to Digital Forensics</option>
+                    <option value="CIS3344">Client-Side Scripting</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="Questions">
+
+            <h2>Course Questions:</h2>
+            <table>
+                <tr>
+                    <td>
+                        <h4>Question 1: The course objectives were clear and defined. </h4>
+
+                        <input type="radio" name="Q1" id="Q1" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q1" id="Q1" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q1" id="Q1" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q1" id="Q1" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q1" id="Q1" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 2: The course materials were relevant and useful. </h4>
+                        <input type="radio" name="Q2" id="Q2" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q2" id="Q2" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q2" id="Q2" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q2" id="Q2" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q2" id="Q2" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 3: The course workload was manageable and appropriate for the credit hours.</h4>
+                        <input type="radio" name="Q3" id="Q3" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q3" id="Q3" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q3" id="Q3" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q3" id="Q3" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q3" id="Q3" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 4: The structure and organization of the course facilitated learning. </h4>
+                        <input type="radio" name="Q4" id="Q4" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q4" id="Q4" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q4" id="Q4" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q4" id="Q4" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q4" id="Q4" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 5: The course provided opportunities for interaction and discussion. </h4>
+                        <input type="radio" name="Q5" id="Q5" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q5" id="Q5" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q5" id="Q5" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q5" id="Q5" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q5" id="Q5" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 6: Assignments and projects contributed significantly to my understanding of the subject.</h4>
+                        <input type="radio" name="Q6" id="Q6" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q6" id="Q6" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q6" id="Q6" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q6" id="Q6" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q6" id="Q6" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 7: The grading system was clear, and the feedback on assignments was constructive. </h4>
+                        <input type="radio" name="Q7" id="Q7" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q7" id="Q7" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q7" id="Q7" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q7" id="Q7" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q7" id="Q7" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 8: The course was challenging but achievable, promoting critical thinking and problem solving skills. </h4>
+                        <input type="radio" name="Q8" id="Q8" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q8" id="Q8" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q8" id="Q8" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q8" id="Q8" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q8" id="Q8" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 9: The course integrated practical examples and real world applications.</h4>
+                        <input type="radio" name="Q9" id="Q9" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q9" id="Q9" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q9" id="Q9" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q9" id="Q9" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q9" id="Q9" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 10: There were sufficient resources and support available outside of class.</h4>
+                        <input type="radio" name="Q10" id="Q10" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q10" id="Q10" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q10" id="Q10" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q10" id="Q10" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q10" id="Q10" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 11: You put alot of time into this course compared to others.</h4>
+                        <input type="radio" name="Q11" id="Q11" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q11" id="Q11" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q11" id="Q11" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q11" id="Q11" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q11" id="Q11" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 12:You would like to retake the course again.</h4>
+                        <input type="radio" name="Q12" id="Q12" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q12" id="Q12" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q12" id="Q12" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q12" id="Q12" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q12" id="Q12" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="Questions">
+
+            <h2>Professor Questions:</h2>
+            <table>
+                <tr>
+                    <td>
+                        <h4>Question 13: The professor demonstrated a thorough knowledge of the subject. </h4>
+
+                        <input type="radio" name="Q13" id="Q13" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q13" id="Q13" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q13" id="Q13" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q13" id="Q13" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q13" id="Q13" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 14: The professor communicated the content effectively and clearly.. </h4>
+                        <input type="radio" name="Q14" id="Q14" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q14" id="Q14" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q14" id="Q14" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q14" id="Q14" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q14" id="Q14" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 15: The professor was approachable and willing to assist students outside of class.</h4>
+                        <input type="radio" name="Q15" id="Q15" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q15" id="Q15" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q15" id="Q15" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q15" id="Q15" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q15" id="Q15" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 16: The professor encouraged questions, and addressed them with adequate explanations. </h4>
+                        <input type="radio" name="Q16" id="Q16" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q16" id="Q16" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q16" id="Q16" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q16" id="Q16" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q16" id="Q16" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 17: The professor created a classroom atmosphere that was conducive to learning. </h4>
+                        <input type="radio" name="Q17" id="Q17" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q17" id="Q17" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q17" id="Q17" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q17" id="Q17" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q17" id="Q17" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 18: The professor used a variety of teaching methods to cater to different learning styles.</h4>
+                        <input type="radio" name="Q18" id="Q18" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q18" id="Q18" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q18" id="Q18" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q18" id="Q18" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q18" id="Q18" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 19: The professor provided timely and constructive feedback on assignments and exams. </h4>
+                        <input type="radio" name="Q19" id="Q19" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q19" id="Q19" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q19" id="Q19" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q19" id="Q19" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q19" id="Q19" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Question 20: The professor treated all students with respect and fairness. </h4>
+                        <input type="radio" name="Q20" id="Q20" value="StronglyAgree" required />
+                        <label for="StronglyAgree">Strongly agree </label>
+
+                        <input type="radio" name="Q20" id="Q20" value="Agree" required />
+                        <label for="Agree">Agree </label>
+
+                        <input type="radio" name="Q20" id="Q20" value="Neutral" required />
+                        <label for="Netural">Netural </label>
+
+                        <input type="radio" name="Q20" id="Q20" value="Disagree" required />
+                        <label for="Disagree">Disagree </label>
+
+                        <input type="radio" name="Q20" id="Q20" value="StronglyDisagree" required />
+                        <label for="StronglyDisagree">Strongly disagree </label>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <br />
+        <br>
+        <div>
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" runat="server" />
+        </div>
+
+    </form>
+</body>
+</html>

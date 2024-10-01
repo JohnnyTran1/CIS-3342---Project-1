@@ -1,0 +1,43 @@
+﻿body {
+    margin-top: 120px;
+}
+
+
+.titleNav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    background-color: #f24848; /*USe a google extension, colorZilla to get the exactly color red I want*/
+    align-items: center;
+}
+
+.titleNav img {
+    width: 300px;
+     margin-right: 20px;
+    border-style: solid;
+}
+
+.StudentInfo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.Courses {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.Questions {
+    border-style: solid;
+}
+
+h2, h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

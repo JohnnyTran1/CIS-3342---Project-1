@@ -1,0 +1,36 @@
+﻿body {
+    margin-top: 120px;
+}
+
+.titleNav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    background-color: #f24848;
+    align-items: center;
+}
+/*It's use for the templeUniversityName.png*/
+    .titleNav img {
+        width: 300px;
+        margin-right: 20px;
+        border-style: solid;
+    }
+
+.Result {
+    border-style: solid;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    background-color: #f24848;
+    /*padding-top: 20rem;*/
+    /*font-size: 1rem;*/
+    text-align: center;
+    width: 100%;
+}
